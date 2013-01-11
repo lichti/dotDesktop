@@ -1,0 +1,14 @@
+#!/usr/bin/env xdg-open
+[Desktop Entry]
+Version=1.0
+Name=Gmail
+GenericName[pt]=Navegador Web
+GenericName[pt_BR]=Navegador da Internet
+Comment[pt]=Aceder à Internet
+Comment[pt_BR]=Acessar a internet
+Exec=/opt/google/chrome/google-chrome --app=https://mail.google.com/mail/u/0
+Terminal=false
+Icon=gmail
+Type=Application
+Categories=Network;WebBrowser;
+StartupWMClass=mail.google.com__mail_u_0

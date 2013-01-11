@@ -1,0 +1,14 @@
+#!/usr/bin/env xdg-open
+[Desktop Entry]
+Version=1.0
+Name=A Radiorock
+GenericName[pt]=Navegador Web
+GenericName[pt_BR]=Navegador da Internet
+Comment[pt]=Aceder à Internet
+Comment[pt_BR]=Acessar a internet
+Exec=/opt/google/chrome/google-chrome --app=http://www.radiorock.com.br/aacplayer.swf
+Terminal=false
+Icon=radiorock
+Type=Application
+Categories=Network;WebBrowser;
+StartupWMClass=www.radiorock.com.br__aacplayer.swf
