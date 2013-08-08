@@ -6,9 +6,9 @@ GenericName[pt]=Navegador Web
 GenericName[pt_BR]=Navegador da Internet
 Comment[pt]=Aceder à Internet
 Comment[pt_BR]=Acessar a internet
-Exec=/opt/google/chrome/google-chrome --app=https://mail.google.com/mail/u/0
+Exec=/opt/google/chrome/google-chrome --app=https://mail.google.com/
 Terminal=false
 Icon=gmail
 Type=Application
 Categories=Network;WebBrowser;
-StartupWMClass=mail.google.com__mail_u_0
+StartupWMClass=mail.google.com_gustavo.lichti@gmail.com
