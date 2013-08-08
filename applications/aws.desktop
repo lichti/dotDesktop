@@ -1,0 +1,9 @@
+#!/usr/bin/env xdg-open
+[Desktop Entry]
+Version=1.0
+Terminal=false
+Type=Application
+Name=AWS
+Exec=/opt/google/chrome/chrome --app=https://console.aws.amazon.com/console/home
+Icon=aws
+StartupWMClass=console.aws.amazon.com__console_home
