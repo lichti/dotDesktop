@@ -1,0 +1,2242 @@
+/* Copyright 2009, Red Hat, Inc.
+ *
+ * Portions adapted from Mx's data/style/default.css
+ *   Copyright 2009 Intel Corporation
+ *
+ * This program is free software; you can redistribute it and/or modify it
+ * under the terms and conditions of the GNU Lesser General Public License,
+ * version 2.1, as published by the Free Software Foundation.
+ *
+ * This program is distributed in the hope it will be useful, but WITHOUT ANY
+ * WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
+ * FOR A PARTICULAR PURPOSE.  See the GNU Lesser General Public License for
+ * more details.
+ *
+ * You should have received a copy of the GNU Lesser General Public License
+ * along with this program; if not, write to the Free Software Foundation,
+ * Inc., 51 Franklin St - Fifth Floor, Boston, MA 02110-1301 USA.
+ */
+
+/*GNOME Shell Adwaita-White theme designed by Oberon http://www.pcfaidate.com */
+
+/* Text Styles */
+
+/* default text style */
+stage {
+    font-family: cantarell, sans-serif;
+}
+
+/* links */
+.shell-link {
+    color: #000000;
+    text-decoration: underline;
+}
+
+.shell-link:hover {
+    color: #222;
+}
+
+.label-shadow {
+    color: rgba(255,255,255,0.5);
+}
+
+.label-real-shadow {
+    background-gradient-direction: horizontal;
+    background-gradient-start: rgba(0, 0, 0, 0);
+    background-gradient-end: rgba(0, 0, 0, 255);
+    width: 10px;
+}
+
+/* Scroll Bars */
+
+StScrollBar
+{
+  padding: 0px;
+}
+
+StScrollView StScrollBar
+{
+  min-width: 16px;
+  min-height: 16px;
+}
+
+
+StScrollBar StBin#trough {
+    background-color: rgba(250,250,250,0.4);
+    border-radius: 4px;
+}
+
+StScrollBar StButton#vhandle
+{
+    border-radius: 4px;
+    background-color: rgba(250,250,250,0.4);
+    border: 1px solid rgba(44,44,44,0.4);
+}
+
+StScrollBar StButton#hhandle
+{
+    border-radius: 4px;
+    background-color: rgba(250,250,250,0.4);
+    border: 1px solid rgba(44,44,44,0.4);
+}
+
+StScrollBar StButton#hhandle:hover,
+StScrollBar StButton#vhandle:hover
+{
+    background-color: rgba(256,256,256,0.9);
+}
+
+/* Check Boxes */
+
+.check-box ShellGenericContainer {
+    spacing: .8em;
+}
+
+.check-box StBin {
+    width: 24px;
+    height: 22px;
+    background-image: url("checkbox-off.png");
+}
+
+.check-box:focus StBin {
+    background-image: url("checkbox-off-focused.png");
+}
+
+.check-box:checked StBin {
+    background-image: url("checkbox.png");
+}
+
+.check-box:focus:checked StBin {
+    background-image: url("checkbox-focused.png");
+}
+
+StTooltip StLabel {
+    border-radius: 5px 5px 5px 5px;
+    background-gradient-direction: vertical;
+    background-gradient-start: rgba(255,255,255,1);
+    background-gradient-end: rgba(214,214,214,1);
+    box-shadow: inset 0px 1px 1px rgba(255,255,255,0.4);
+    padding: 4px;
+    color: #444;
+    font-size: 0.8em;
+    font-weight: normal;
+    text-align: center;
+}
+
+/* PopupMenu */
+    
+.popup-menu-boxpointer {
+    border-radius: 10px 10px 10px 10px;
+    background-gradient-direction: vertical;
+    background-gradient-start: rgba(255,255,255,1);
+    background-gradient-end: rgba(214,214,214,0.5);
+    border: 1px solid rgba(44,44,44,0.4);
+    box-shadow: 0px 0px 8px 4px rgba(0,0,0,0.0);
+    -arrow-border-width: 10px;
+    -arrow-base: 40px;
+/*    GROSCACA*/
+    -arrow-background-color: rgba(255,0,0,0);
+    -arrow-border-color: rgba(0,255,0,0);
+}
+
+.popup-menu {
+    color: rgba(42,42,42,0.5);
+    min-width: 200px;
+}
+
+.popup-sub-menu {
+/*    background-gradient-direction: vertical;*/
+/*    background-gradient-start: rgba(255,255,255,0.5);*/
+/*    background-gradient-end: rgba(214,214,214,0.4);*/
+/*    box-shadow: inset 1px 8px 4px rgba(255,0,0,1);*/
+/*    border: 1px solid rgba(30,30,30,0.1);*/
+    border: 0px;
+    border-radius: 8px;
+}
+
+.popup-sub-menu .popup-menu-item {
+    font-weight: normal;
+}
+
+/* The remaining popup-menu sizing is all done in ems, so that if you
+ * override .popup-menu.font-size, everything else will scale with it.
+ */
+.popup-menu-content {
+    padding: 0em 0em;
+    padding-left: 2px;
+    padding-right: 2px;
+}
+
+.popup-menu-item {
+    font-weight: bold;
+    padding: .4em 1.5em;
+    spacing: 1em;
+}
+
+.popup-menu-item:active {
+    background-color: #4A90D9;
+    border-radius: 4px;
+    box-shadow: inset  0px 2px 2px rgba(0,0,0,0.6);
+    color: #fff;
+    text-shadow: rgba(0,0,0,0.5) 0px 2px 2px;
+}
+
+.popup-image-menu-item {
+}
+
+.popup-alternating-menu-item:alternate {
+    font-weight: bold;
+}
+
+.popup-separator-menu-item {
+    -gradient-height: 1px;
+    -gradient-start: rgba(255,255,255,0.0);
+    -gradient-end: rgba(255,255,255,1.0);
+    -margin-horizontal: 1.5em;
+    height: 1em;
+}
+
+.popup-slider-menu-item {
+    height: 1em;
+    min-width: 15em;
+    -slider-height: 0.3em;
+    -slider-background-color: #4A90D9;
+    -slider-border-color: #5f5f5f;
+    -slider-active-background-color: #4A90D9;;
+    -slider-active-border-color: #444;
+    -slider-border-width: 1px;
+    -slider-handle-radius: 0.5em;
+}
+
+.popup-device-menu-item {
+    spacing: .5em;
+}
+
+.popup-menu-icon {
+    icon-size: 1.14em;
+}
+
+/* Switches (to be used in menus) */
+.toggle-switch {
+    width: 4.5em;
+    height: 1.5em;
+}
+
+.toggle-switch-us {
+    background-image: url("toggle-off-us.png");
+}
+.toggle-switch-us:checked {
+    background-image: url("toggle-on-us.png");
+}
+
+.toggle-switch-intl {
+    background-image: url("toggle-off-intl.png");
+}
+.toggle-switch-intl:checked {
+    background-image: url("toggle-on-intl.png");
+}
+
+/* Panel */
+
+#panel {
+    background-gradient-direction: vertical;
+    background-gradient-start: rgba(208,211,213,0.5);
+    background-gradient-end: rgba(251,251,251,0.7);
+    border: 1px solid rgba(0,0,0,0.1);
+    border-top: 0px;
+    border-bottom: 1px;
+    border-left: 0px;
+    border-right: 0px;
+    color: rgba(22,22,22,0.8);
+    font-size: 10.5pt; 
+    box-shadow: 0px 0px 6px 4px rgba(0,0,0,0.0);
+    height: 1.64em;
+    border-radius: 0px;
+}
+
+#panelLeft, #panelCenter, #panelRight {
+    spacing: 2px;
+    font-weight: bold;
+}
+
+#panelLeft:ltr {
+    padding-right: 2px;
+}
+
+#panelLeft:rtl {
+    padding-left: 2px;
+}
+
+#panelRight:ltr {
+    padding-left: 2px;
+}
+
+#panelRight:rtl {
+    padding-right: 2px;
+}
+
+
+#appMenu {
+    spacing: 4px;
+    color: rgba(66,66,66,0.9);
+}
+
+.panel-button #appMenuIcon {
+    app-icon-bottom-clip: 0px;
+}
+
+.panel-button:active #appMenuIcon,
+.panel-button:checked #appMenuIcon,
+.panel-button:focus #appMenuIcon {
+    app-icon-bottom-clip: 0px;
+}
+
+.app-menu-icon {
+    width: 24px;
+    height: 24px;
+}
+
+.panel-button {
+    -natural-hpadding: 6px;
+    -minimum-hpadding: 3px;
+    text-shadow: rgba(255,255,255,0.7) 0px 1px 0px;
+    border: 1px solid rgba(33,33,33,0);
+    border-top: 0px;
+    border-bottom: 0px;
+    transition-duration: 100;
+}
+
+
+.panel-button:active,
+.panel-button:checked,
+.panel-button:focus {
+    background-gradient-direction: vertical;
+    background-gradient-start: rgba(255,255,255,0.8);
+    background-gradient-end: rgba(194,194,194,0.4);
+    border: 1px solid rgba(33,33,33,0.4);
+    border-top: 0px;
+    border-bottom: 0px;
+    color: #222;
+    text-shadow: 0px 1px 2px rgba(250,250,250,0.9);
+    box-shadow: inset 0px 0px 1px rgba(0,0,0,0.8);
+    transition-duration: 100
+}
+
+
+
+#statusTray > .panel-button:active,
+#statusTray > .panel-button:checked,
+#statusTray > .panel-button:focus {
+}
+
+.panel-button:active > .system-status-icon,
+.panel-button:checked > .system-status-icon,
+.panel-button:focus > .system-status-icon {
+
+}
+
+#panelActivities {
+    border-left: 0px;
+    border-radius-topleft: 0px;
+    border-radius-bottomleft: 0px;
+}
+
+#panelStatus {
+    border-right: 0px;
+    border-radius-topright: 0px;
+    border-radius-bottomright: 0px;
+}
+
+#panelStatusMenu {
+    spacing: 4px;
+}
+
+#legacyTray {
+    spacing: 14px;
+    padding-left: 14px;
+}
+
+#legacyTray:compact {
+    spacing: 8px;
+}
+
+#panelUserMenu {
+    spacing: 4px;
+}
+
+.status-chooser {
+    spacing: .4em;
+}
+
+.status-chooser .popup-menu-item,
+.status-chooser-combo .popup-menu-item {
+    padding: .4em;
+}
+
+.status-chooser-user-icon {
+    border: 1px solid rgba(0,0,0,0.1);
+    border-radius: 5px;
+    width: 48pt;
+    height: 48pt;
+    transition-duration: 100;
+}
+
+.status-chooser-user-icon:hover {
+    border: 1px solid rgba(0,0,0,0.3);
+    transition-duration: 100;
+}
+
+.status-chooser-user-name {
+    font-weight: bold;
+    font-size: 1.3em;
+    min-width: 120pt;
+}
+
+.status-chooser-combo {
+
+    border: 1px solid transparent;
+}
+
+.status-chooser-combo.popup-combo-menu {
+    border: 1px solid rgba(66,66,66,0.4);
+    background-gradient-direction: vertical; 
+    background-gradient-start: rgba(255,255,255,0.9);
+    background-gradient-end: rgba(255,255,255,1);
+    text-shadow: white 0px 2px 3px;
+    box-shadow: 0px 0px 3px 2px rgba(74,144,217,0.3);
+    transition-duration: 100;
+    border-radius: 4px;
+    font-size: 10.5pt;
+    text-shadow: 0px 1px 2px rgba(250,250,250,0.9);
+    box-shadow: inset 0px 0px 1px rgba(0,0,0,0.8);
+}
+
+.status-chooser-status-item,
+.status-chooser-combo .popup-combobox-item {
+    spacing: .4em;
+    color: rgba(42,42,42,0.5);
+}
+
+
+.system-status-icon {
+    icon-size: 1.14em;
+}
+
+/* Overview */
+
+#overview {
+    spacing: 12px;
+    background-color: rgba(255,255,255,0);
+}
+
+.workspaces-view {
+    color: white;
+    spacing: 25px;
+}
+
+.workspace-controls {
+    visible-width: 32px; /* Amount visible before hovering */
+}
+
+.workspace-thumbnails-background {
+    background-gradient-direction: horizontal;
+    background-gradient-end: rgba(208,211,213,0.3);
+    background-gradient-start: rgba(251,251,251,0.6);
+    border: 1px solid rgba(0,0,0,0.3);
+    border-right: 0px;
+    border-radius: 9px 0px 0px 9px;
+    padding: 8px;
+}
+
+
+
+.workspace-thumbnails-background:rtl {
+    border-right: 1px;
+    border-left: 0px;
+    border-radius: 0px 9px 9px 0px;
+}
+
+.workspace-thumbnails {
+    spacing: 7px;
+}
+
+.workspace-thumbnail-indicator {
+    outline: 3px solid #86A7C2;
+}
+
+.window-caption {
+    background-gradient-direction: vertical;
+    background-gradient-start: rgba(251,251,251,0.9);
+    background-gradient-end: rgba(208,211,213,0.7);
+    border: 1px solid rgba(0,0,0,0.2);
+    border-radius: 4px;
+    color: #222;
+    font-size: 9pt;
+    padding: 2px 8px;
+    -shell-caption-spacing: 4px;
+    box-shadow: 0px 0px 4px 2px rgba(0,0,0,0.0);
+}
+
+.window-close {
+    background-image: url("close-window.png");
+    height: 22px;
+    width: 22px;
+    -st-background-image-shadow: 2px 2px 6px rgba(0,0,0,0.5);
+    -shell-close-overlap: 16px;
+}
+
+/* Dash */
+
+#dash {
+    padding: 4px 0px;
+    font-size: 12px;
+    background-gradient-direction: horizontal;
+    background-gradient-start: rgba(208,211,213,0.4);
+    background-gradient-end: rgba(255,255,255,0.6);
+    border: 1px solid rgba(0,0,0,0.3);
+    border-left:1px;
+    border-radius: 0px 8px 8px 0px;     
+    color: rgba(82,82,82,0.3);
+ }
+
+
+
+#dash:rtl {
+    border-left: 1px;
+    border-right: 0px;
+    border-radius: 9px 0px 0px 9px;
+}
+
+#dash:empty {
+    height: 100px;
+    width: 60px;
+}
+
+.dash-placeholder {
+    background-image: url("dash-placeholder.svg");
+    height: 27px;
+    width: 48px;
+}
+
+#viewSelector {
+    spacing: 16px;
+    font-size: 10pt;
+}
+
+#viewSelectorTabBar {
+    padding: 1px;
+    border-radius: 6px;
+    border: 0px solid #666;
+    border-top: 0px;
+    border-left: 0px;
+}
+
+/* Search Box */
+
+#searchArea {
+    padding: 0px 24px;
+}
+
+#searchEntry {
+    padding: 4px 8px;
+    border-radius: 3px;
+    color: #3C3B37;
+    border: 1px solid #4A90D9;
+    background-color: rgba(255, 255, 255, 0.9);
+    caret-color: rgb(128, 128, 128);
+    caret-size: 1px;
+    font: 12px sans-serif;
+    height: 16px;
+    width: 250px;
+    box-shadow: 0px 0px 1px 2px rgba(33, 33, 33, 0.0);
+}
+
+#searchEntry:focus {
+    color: rgba(33,33,33,0.7);
+    border: 1px solid #6C9CC4;
+    background-color: rgba(255, 255, 255, 0.8);
+}
+
+#searchEntry:hover {
+    border: 1px solid #6C9CC4;
+    background-color: rgba(255, 255, 255, 0.9);
+    caret-color: #545454;
+}
+
+.search-entry-icon {
+    icon-size: 4em;
+    color: #222;
+}
+
+/* View Tabs */
+
+.view-tab-title {
+    color: #B6B6B6;
+    font: 14px cantarell;
+    font-weight: bold;
+    padding: 0px 14px;
+    height: 20px;
+    border-radius: 6px;
+    border: 1px solid rgba(0,0,0,0);
+}
+
+.view-tab-title:selected {
+    color: #111;
+    background-gradient-direction: vertical;
+    background-gradient-start: rgba(251,251,251,0.7);
+    background-gradient-end: rgba(208,211,213,0.5);
+    box-shadow: 0px 0px 6px 1px rgba(0,0,0,0);
+    border: 1px solid rgba(0,0,0,0.3);
+}
+
+.view-tab-title:hover {
+    color: #111;
+    background-gradient-direction: vertical;
+    background-gradient-start: rgba(251,251,251,0.7);
+    background-gradient-end: rgba(208,211,213,0.5);
+    box-shadow: 0px 0px 3px 2px rgba(74,144,217,0.3);
+    border: 1px solid rgba(0,0,0,0.3);
+}
+
+.view-tab-boxpointer {
+    -arrow-border-radius: 9px;
+/*    -arrow-background-color: rgba(55,55,55,0.5);*/
+    -arrow-border-width: 2px;
+/*    -arrow-border-color: rgba(66,66,66,0.6);*/
+    -arrow-base: 30px;
+    -arrow-rise: 15px;
+}
+
+/* Search Results */
+
+#searchResults {
+    padding: 20px 10px 10px 10px;
+}
+
+#searchResultsContent {
+    padding: 0 10px;
+    spacing: 8px;
+}
+
+.search-statustext,
+.search-section-header {
+    font: 12px sans-serif;
+    font-weight: bold;
+    padding: 4px 12px;
+    spacing: 4px;
+    color: rgba(66,66,66,0.8);
+}
+
+.search-section {
+    background-color: rgba(255,255,255,0.4);
+    border: 1px solid rgba(0,0,0,0.3);
+    border-radius: 7px;
+}
+
+.search-section-results {
+    background-color: rgba(255,255,255,0.0);
+    color: rgba(66,66,66,0.8);
+    border-radius: 0px 0px 4px 4px;
+    border: 1px solid rgba(0,0,0,0.3);
+    padding: 6px;
+    border-left: 0px;
+    border-right: 0px;
+    border-bottom: 0px;
+}
+
+.search-section-list-results {
+    spacing: 4px;
+}
+
+.results-container {
+    spacing: 4px;
+}
+
+.search-providers-box {
+    spacing: 12px;
+}
+
+/* Text labels are an odd number of pixels tall. The uneven top and bottom
+ * padding compensates for this and ensures that the label is vertically
+ * centered */
+.dash-search-button {
+    border: 1px solid rgba(44,44,44,0.5);
+    background-gradient-direction: vertical;
+    background-gradient-start: rgba(255,255,255,1);
+    background-gradient-end: rgba(214,214,214,1);
+    border-radius: 7px;
+    height: 26px;
+    width: 200px;
+    box-shadow: 0px 0px 4px 2px rgba(33,33,33,0.3);
+
+}
+
+.dash-search-button:selected,
+.dash-search-button:hover {
+    border: 1px solid rgba(44,44,44,0.5);
+    background-gradient-direction: vertical;
+    background-gradient-start: rgba(255,255,255,1);
+    background-gradient-end: rgba(214,214,214,1);
+    box-shadow: 0px 0px 6px 3px #4A90D9;
+}
+
+.dash-search-button-label {
+    color: #222;
+    font-size: 12pt;
+}
+
+.dash-label {
+    border-radius: 7px;
+    padding: 4px 12px;
+    background-gradient-direction: vertical;
+    background-gradient-start: rgba(255,255,255,0.7);
+    background-gradient-end: rgba(214,214,214,0.5);
+    text-align: center;
+    -x-offset: 8px;
+}
+
+/* Application Launchers and Grid */
+
+.icon-grid {
+    spacing: 36px;
+    -shell-grid-horizontal-item-size: 118px;
+    -shell-grid-vertical-item-size: 118px;
+
+/*    -shell-grid-item-size: 118px;*/
+}
+
+.contact-grid {
+    spacing: 36px;
+    -shell-grid-horizontal-item-size: 272px; /* 2 * -shell-grid-horizontal-item-size + spacing */
+    -shell-grid-vertical-item-size: 118px;
+}
+
+.icon-grid .overview-icon {
+    icon-size: 96px;
+}
+
+.all-app {
+    padding: 16px 25px 16px 16px;
+    spacing: 20px;
+}
+
+.all-app:rtl {
+    padding-right: 16px;
+    padding-left: 25px;
+}
+
+.app-filter {
+    font-size: 10.5pt;
+    font-weight: bold;
+    height: 2.85em;
+    color: #B6B6B6;
+    width: 200px;
+}
+
+.app-filter:hover {
+    color: #fff;
+}
+
+.app-filter:selected {
+    color: #fff;
+    background-image: url("filter-selected.png");
+    background-position: 190px 10px;
+}
+
+.app-filter:focus {
+    outline: 1px solid #aaa;
+}
+
+.dash-item-container > .app-well-app {
+    padding: 4px 8px;
+}
+
+.remove-favorite-icon {
+    color: #a0a0a0;
+}
+
+.remove-favorite-icon:hover {
+    color: white;
+    icon-shadow: black 0px 2px 2px;
+}
+
+.app-well-app > .overview-icon,
+.remove-favorite > .overview-icon,
+.search-result-content > .overview-icon {
+    border-radius: 4px;
+    padding: 3px;
+    border: 1px rgba(0,0,0,0);
+    font-size: 7.5pt;
+    transition-duration: 100;
+    text-align: center;
+    color: #fff;
+    text-shadow: black 0px 5px 9px;
+}
+
+/* Contacts */
+
+.contact {
+    width: 266px; /* Same width as two normal results + spacing */
+    height: 112px; /* Aspect ratio = 1.75. Normal US business card ratio */
+    border-radius: 4px;
+    border: 1px rgba(0,0,0,0.3);
+    transition-duration: 100;
+}
+
+.contact-content {
+    border-radius: 2px;
+    padding: 8px;
+    width: 232px;
+    height: 84px;
+    background-color: rgba(250,250,250,0);
+    color: black;
+    text-align: center;
+}
+
+.contact-icon {
+  border-radius: 4px;
+}
+
+.contact-details {
+  padding: 6px 8px 11px 8px;
+}
+
+.contact-details-alias {
+  font-size: 16px;
+  padding-bottom: 11px;
+}
+
+.contact-details-status {
+  font-size: 11pt;
+}
+
+.contact-details-status-icon {
+  padding-right: 2px;
+}
+
+.contact:hover {
+    border: 1px solid rgba(66,66,66,0.4);
+    background-gradient-direction: vertical; 
+    background-gradient-start: rgba(255,255,255,0.7);
+    background-gradient-end: rgba(200,200,200,0.2);
+    color: rgba(22,22,22,1.0);
+    text-shadow: white 0px 2px 3px;
+    box-shadow: 0px 0px 3px 2px rgba(74,144,217,0.3);
+    transition-duration: 100;
+}
+
+.app-well-app.running > .overview-icon {
+    border: 1px solid rgba(66,66,66,0.4);
+    background-gradient-direction: vertical;
+    background-gradient-start: rgba(255,255,255,0.7);
+    background-gradient-end: rgba(200,200,200,0.2);
+    border-radius: 7px;
+    color: rgba(22,22,22,1.0);
+    text-shadow: white 0px 1px 3px;
+    padding: 3px;
+    box-shadow: 0px 0px 6px 1px rgba(0,0,0,0.0);
+}
+
+.contact:selected,
+.app-well-app:selected > .overview-icon,
+.search-result-content:selected > .overview-icon {
+    border: 1px solid rgba(66,66,66,0.4);
+    background-gradient-direction: vertical;
+    background-gradient-start: rgba(255,255,255,0.7);
+    background-gradient-end: rgba(200,200,200,0.2);
+    padding: 3px;
+    border-radius: 7px;
+    color: rgba(22,22,22,1.0);
+    text-shadow: white 0px 2px 3px;
+    box-shadow: 0px 0px 0px 0px rgba(74,144,217,0.0);
+}
+
+.app-well-app:hover > .overview-icon,
+.remove-favorite:hover > .overview-icon,
+.search-result-content:hover > .overview-icon {
+    border: 1px solid rgba(66,66,66,0.4);
+    background-gradient-direction: vertical; 
+    background-gradient-start: rgba(255,255,255,0.7);
+    background-gradient-end: rgba(200,200,200,0.2);
+    border-radius: 7px;
+    padding: 3px;
+    color: rgba(22,22,22,1.0);
+    text-shadow: white 0px 2px 3px;
+    box-shadow: 0px 0px 3px 2px rgba(74,144,217,0.3);
+    transition-duration: 100;
+}
+
+.app-well-app:active > .overview-icon {
+    border: 1px solid rgba(166,166,166,0.4);
+    background-gradient-direction: vertical;
+    background-gradient-start: rgba(255,255,255,0.7);
+    background-gradient-end: rgba(200,200,200,0.2);
+    padding: 3px;
+    color: rgba(22,22,22,1.0);
+    border-radius: 7px;
+    text-shadow: white 0px 3px 3px;
+    padding: 3px;
+    box-shadow: inset  0px 3px 3px rgba(0,0,0,0.0);
+}
+
+.contact:focus,
+.app-well-app:focus > .overview-icon,
+.search-result-content:focus > .overview-icon {
+    border: 1px solid #cccccc;
+}
+
+
+/*
+.icon-grid {
+    spacing: 36px;
+    -shell-grid-item-size: 118px;
+}
+
+.all-app {
+    padding: 16px 25px 16px 16px;
+    spacing: 20px;
+}
+
+.all-app .icon-grid {
+    -shell-grid-item-size: 118px;
+
+}
+
+.all-app .overview-icon {
+    icon-size: 96px;
+}
+
+.app-filter {
+    font-size: 10pt;
+    font-weight: bold;
+    height: 40px;
+    color: #B6B6B6;
+    width: 200px;
+}
+
+.app-filter:selected {
+    color: #fff;
+    background-image: url("filter-selected.png");
+    background-position: 190px 10px;
+}
+
+.app-filter:hover {
+    color: #fff;
+
+}
+.dash-item-container > .app-well-app {
+    padding: 6px 6px;
+}
+
+.remove-favorite-icon {
+    color: #a0a0a0;
+}
+
+.remove-favorite-icon:hover {
+    color: white;
+    icon-shadow: black 0px 2px 2px;
+}
+
+.app-well-app > .overview-icon,
+.remove-favorite > .overview-icon,
+.search-result-content > .overview-icon {
+    color: #fff;
+    text-shadow: black 0px 5px 9px;
+    font-weight: bold;
+    font: 11px sans-serif;
+    padding: 4px;
+    text-align: center;
+}
+
+.app-well-app.running > .overview-icon {
+    border: 1px solid rgba(66,66,66,0.4);
+    background-gradient-direction: vertical;
+    background-gradient-start: rgba(255,255,255,0.7);
+    background-gradient-end: rgba(200,200,200,0.2);
+    border-radius: 7px;
+    color: rgba(22,22,22,1.0);
+    text-shadow: white 0px 1px 3px;
+    padding: 3px;
+    box-shadow: 0px 0px 6px 1px rgba(0,0,0,0.0);
+}
+
+.app-well-app:selected > .overview-icon,
+.search-result-content:selected > .overview-icon {
+    border: 1px solid rgba(66,66,66,0.4);
+    background-gradient-direction: vertical;
+    background-gradient-start: rgba(255,255,255,0.7);
+    background-gradient-end: rgba(200,200,200,0.2);
+    padding: 3px;
+    border-radius: 7px;
+    color: rgba(22,22,22,1.0);
+    text-shadow: white 0px 2px 3px;
+    box-shadow: 0px 0px 0px 0px rgba(74,144,217,0.0);
+}
+
+.app-well-app:hover > .overview-icon,
+.remove-favorite:hover > .overview-icon,
+.search-result-content:hover > .overview-icon {
+    border: 1px solid rgba(66,66,66,0.4);
+    background-gradient-direction: vertical; 
+    background-gradient-start: rgba(255,255,255,0.7);
+    background-gradient-end: rgba(200,200,200,0.2);
+    border-radius: 7px;
+    padding: 3px;
+    color: rgba(22,22,22,1.0);
+    text-shadow: white 0px 2px 3px;
+    box-shadow: 0px 0px 3px 2px rgba(74,144,217,0.3);
+}
+
+.app-well-app:active > .overview-icon {
+    border: 1px solid rgba(166,166,166,0.4);
+    background-gradient-direction: vertical;
+    background-gradient-start: rgba(255,255,255,0.7);
+    background-gradient-end: rgba(200,200,200,0.2);
+    padding: 3px;
+    color: rgba(22,22,22,1.0);
+    border-radius: 7px;
+    text-shadow: white 0px 3px 3px;
+    padding: 3px;
+    box-shadow: inset  0px 3px 3px rgba(0,0,0,0.0);
+}
+
+*/
+
+.app-well-menu {
+    font-size: 9pt;
+}
+
+
+
+/* LookingGlass */
+
+#LookingGlassDialog
+{
+  background-color: rgba(0,0,0,0.85);
+  spacing: 4px;
+  padding: 4px;
+  border: 2px solid grey;
+  border-radius: 4px;
+
+  color: #88ff66;
+}
+
+#LookingGlassDialog > #Toolbar
+{
+  border: 1px solid grey;
+  border-radius: 4px;
+}
+
+#LookingGlassDialog .labels {
+  spacing: 4px;
+}
+
+#LookingGlassDialog .notebook-tab {
+  padding: 2px;
+}
+
+#LookingGlassDialog .notebook-tab:hover {
+  color: #00ff00;
+}
+
+#LookingGlassDialog .notebook-tab:selected {
+  border: 1px solid #88ff66;
+  border-radius: 4px;
+  padding: 5px;
+}
+
+#LookingGlassDialog .lg-inspector-title {
+    font-weight: bold;
+    padding-bottom: 8px;
+}
+
+.lg-dialog StLabel
+{
+  color: #88ff66;
+}
+
+.lg-dialog StEntry
+{
+  color: #88ff66;
+}
+
+.lg-obj-inspector-title
+{
+  spacing: 4px;
+}
+
+.lg-obj-inspector-button
+{
+  border: 1px solid #88ff66;
+  padding: 4px;
+  border-radius: 4px;
+}
+
+.lg-obj-inspector-button:hover
+{
+  border: 1px solid #00ff00;
+}
+
+.lg-dialog .shell-link
+{
+  color: #88ff66;
+}
+
+.lg-dialog .shell-link:hover
+{
+  color: #00ff00;
+}
+
+#LookingGlassDialog StBoxLayout#EvalBox
+{
+  padding: 4px;
+  spacing: 4px;
+}
+
+#LookingGlassDialog StBoxLayout#ResultsArea
+{
+  spacing: 4px;
+}
+
+#lookingGlassExtensions {
+    padding: 4px;
+}
+
+.lg-extension-list {
+    padding: 4px;
+    spacing: 6px;
+}
+
+.lg-extension {
+    border: 1px solid #6f6f6f;
+    border-radius: 4px;
+    padding: 4px;
+}
+
+.lg-extension-name {
+    font-weight: bold;
+}
+
+.lg-extension-actions {
+    spacing: 6px;
+}
+
+#LookingGlassPropertyInspector {
+    background: rgba(0, 0, 0, 0.9);
+    border: 2px solid grey;
+    border-radius: 4px;
+    padding: 6px;
+    color: #88ff66;
+}
+
+/* Calendar popup */
+
+#calendarArea {
+    /* this is the width of the entire popup */
+    width: 500px;
+}
+
+.calendar-vertical-separator {
+    -stipple-width: 1px;
+    -stipple-color: #505050;
+    width: 1.5em;
+}
+
+#calendarPopup {
+    border-radius: 5px;
+    background: rgba(0,0,0,0.9);
+    border: 1px solid rgba(128,128,128,0.2);
+    color: white;
+}
+
+#calendarPopup .calendar {
+    padding: 10px;
+}
+
+.calendar {
+    padding: .4em 1.75em;
+    spacing-rows: 0px;
+    spacing-columns: 0px;
+}
+
+.calendar-month-label {
+    color: #555;
+    font-size: 10px;
+    padding: 2px;
+}
+
+.calendar-change-month-back {
+    width: 20px;
+    height: 20px;
+    background-image: url("calendar-arrow-left.png");
+    border-radius: 4px;
+}
+.calendar-change-month-back:hover {
+    background-color: rgba(147,182,210,0.6);
+    border-radius: 4px;
+    box-shadow: inset 0px 1px 4px rgba(0,0,0,0.8);
+}
+.calendar-change-month-back:active {
+    background-color: rgba(147,182,210,0.6);
+    border-radius: 4px;
+    box-shadow: inset 0px 2px 4px rgba(0,0,0,0.8);
+}
+
+.calendar-change-month-forward {
+    width: 20px;
+    height: 20px;
+    background-image: url("calendar-arrow-right.png");
+    border-radius: 4px;
+}
+.calendar-change-month-forward:hover {
+    background-color: rgba(147,182,210,0.6);
+    border-radius: 4px;
+    box-shadow: inset 0px 1px 4px rgba(0,0,0,0.8);
+}
+.calendar-change-month-forward:active {
+    background-color: rgba(147,182,210,0.6);
+    border-radius: 4px;
+    box-shadow: inset 0px 2px 4px rgba(0,0,0,0.8);
+}
+
+.datemenu-date-label {
+    padding: .4em 1.75em;
+    font-size: 14px;
+    font-weight: bold;
+    color: #777;
+}
+
+.calendar-day-base {
+    font-size: 10px;
+    text-align: center;
+    width: 24px;
+    height: 24px;
+}
+
+.calendar-day-base:hover {
+    background-color: #B5D2E7;
+    box-shadow: inset 0px 1px 2px rgba(0,0,0,0.8);
+}
+
+.calendar-day-base:active {
+    background-color: #4A90D9;
+color: #fff;
+}
+
+.calendar-day-heading {
+    color: #444;
+}
+
+.calendar-week-number {
+    color: #444;
+    font-weight: bold;
+}
+
+/* Hack used in lieu of border-collapse - see calendar.js */
+.calendar-day {
+    border: 1px solid #fff;
+    border-radius: 4px;
+    color: #222;
+    border-top-width: 0;
+    border-left-width: 0;
+    box-shadow: inset 0px 0px 1px 1px rgba(0,0,0,0.4);
+}
+.calendar-day-top {
+    border-top-width: 1px;
+}
+.calendar-day-left {
+    border-left-width: 1px;
+}
+
+.calendar-work-day {
+}
+
+.calendar-nonwork-day {
+    background-color: rgba(128, 128, 128, .1);
+}
+
+.calendar-today {
+    background-color: #97BBD5;
+    box-shadow: inset 0px 2px 3px rgba(0,0,0,0.7);
+    color: #111;
+    font-weight: bold;
+}
+
+.calendar-other-month-day {
+    color: #999;
+}
+
+.calendar-day-with-events {
+    font-weight: bold;
+}
+
+.events-header-vbox {
+    spacing: 10px;
+}
+
+.events-header {
+    height: 40px;
+}
+
+.events-header-hbox {
+    spacing: 8px;
+    padding: 0.3em;
+}
+
+.events-day-header {
+    font-size: 14px;
+    color: #444;
+}
+
+.events-day-dayname {
+    font-size: 12px;
+    color: rgba(99, 99, 99, 1.0);
+    text-align: left;
+}
+
+.events-day-time {
+    font-size: 12px;
+    font-weight: bold;
+    color: #444;
+    text-align: right;
+}
+
+.events-day-task {
+    font-size: 12px;
+    color: rgba(44, 44, 44, 1.0);
+}
+
+.events-day-name-box {
+    width: 20px;
+}
+
+.events-time-box {
+    width: 70px;
+}
+
+.events-event-box {
+}
+
+.url-highlighter {
+    link-color: #ccccff;
+}
+
+/* Message Tray */
+#message-tray {
+    background-gradient-direction: vertical;
+/*    background-gradient-start: rgba(208,211,213,0.2);*/
+/*    background-gradient-end: rgba(251,251,251,0.4);*/
+    background-gradient-direction: vertical;
+    background-gradient-start: rgba(214,214,214,1); 
+    background-gradient-end: rgba(255,255,255,1);
+    box-shadow: 0px 0px 6px 4px rgba(0,0,0,0);
+    border: 1px solid rgba(180,180,180,1);
+    border-radius: 0px 0px 0px 0px;  
+    border-bottom: 0px;
+    border-left: 0px;
+    border-right: 0px;
+    color: rgba(22,22,2,0.8); 
+    height: 60px;
+}
+
+.notification {
+    font-size: 11pt;
+    color: #222;
+    padding: 8px 8px 4px 8px;
+    spacing-rows: 10px;
+    spacing-columns: 10px;
+    width: 34em;
+    }
+
+.notification, #notification-container {
+    font-size: 11pt;
+    width: 34em;
+}
+
+#notification-container {
+    background-gradient-direction: vertical; 
+    background-gradient-start: rgba(255,255,255,0.7);
+    background-gradient-end: rgba(214,214,214,0.5);
+    border: 1px solid rgba(66,66,66,0.5);
+    border-bottom: 0px;
+    border-radius: 10px 10px 0px 0px;
+/*    margin-top: -10px;*/
+    padding-top: -2px
+}
+
+.notification.multi-line-notification {
+    padding-bottom: 8px;
+}
+
+.notification-unexpanded {
+    /* We want to force the actor at a specific size, irrespective
+       of its minimum and preferred size, so we override both */
+    min-height: 36px;
+    height: 36px;
+}
+
+
+/* We use row-span = 2 for the image cell, which prevents its height preferences to be
+   taken into account during allocation, so its height ends up being limited by the height
+   of the content in the other rows. To avoid showing a stretched image, we set the minimum
+   height of the table to be ICON_SIZE + IMAGE_SIZE + spacing-rows = 24 + 125 + 10 = 159 */
+.notification-with-image {
+    min-height: 159px;
+}
+
+.summary-boxpointer {
+    border-radius: 7px 7px 0px 0px;
+    background-gradient-direction: vertical; 
+    background-gradient-start: rgba(255,255,255,0.7);
+    background-gradient-end: rgba(214,214,214,0.5);
+    border: 1px solid rgba(180,180,180,1);
+    border-bottom: 0px;
+}
+
+.summary-boxpointer #notification {
+    border-radius: 6px;
+    background: rgba(255,255,255,0) !important;
+    padding-bottom: 12px;
+}
+
+.summary-boxpointer #summary-right-click-menu {
+    font-size: 10.5pt;
+    padding-top: 12px;
+    padding-bottom: 12px;
+}
+
+.summary-notification-stack-scrollview {
+    max-height: 18em;
+    padding-top: 6px;
+    padding-bottom: 6px;
+}
+
+/*#summary-notification-stack-scrollview > .top-shadow, #summary-notification-stack-scrollview > .bottom-shadow {*/
+/*    height: 1em;*/
+/*}*/
+
+.summary-notification-stack-scrollview:ltr {
+    padding-right: 8px;
+}
+
+.summary-notification-stack-scrollview:rtl {
+    padding-left: 8px;
+}
+
+.notification-scrollview {
+    max-height: 10em;
+    -st-vfade-offset: 24px;
+}
+
+/*#notification-scrollview > .top-shadow, #notification-scrollview > .bottom-shadow {*/
+/*    height: 1em;*/
+/*}*/
+
+.notification-scrollview:ltr > StScrollBar {
+    padding-left: 6px;
+}
+
+.notification-scrollview:rtl > StScrollBar {
+    padding-right: 6px;
+}
+
+.notification-body {
+    spacing: 5px;
+}
+
+.notification-actions {
+    spacing: 10px;
+}
+
+.notification-button {
+    background-color: rgba(230,230,230,0.5);
+    border-radius: 8px;
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    box-shadow: inset 0px 1px 2px rgba(0,0,0,0);
+    padding: 5px;
+}
+
+.notification-button:hover {
+    background-color: rgba(230,230,230,0.5);
+    border: 1px solid rgba(33, 33, 33, 0.5);
+    box-shadow: inset 0px 1px 2px rgba(0,0,0,0);
+    padding: 5px;
+}
+
+.notification-button:focus {
+    background-color: rgba(74,144,217,0.5);
+    border: 1px solid rgba(33, 33, 33, 0.5);
+    box-shadow: inset 0px 1px 2px rgba(0,0,0,0);
+    padding: 5px;
+}
+
+.notification-button:active {
+    background-color: rgba(230,230,230,0.5);
+    border: 1px solid rgba(33, 33, 33, 0.5);
+    box-shadow: inset 0px 1px 2px rgba(0,0,0,0);
+    padding: 5px;
+}
+
+.notification-icon-button {
+    background-color: rgba(230,230,230,0);
+    border: 1px solid rgba(33, 33, 33, 0);
+    border-radius: 8px;
+    color: #444;
+    text-shadow: white 0px 1px 2px;
+    box-shadow: inset 0px 1px 4px rgba(0,0,0,0);
+    padding: 5px;
+}
+
+.notification-icon-button:hover {
+    border: 1px solid rgba(33, 33, 33, 0.4);
+    background-gradient-direction: vertical; 
+    background-gradient-start: rgba(255,255,255,0.7);
+    background-gradient-end: rgba(214,214,214,0.5);
+}
+
+.notification-icon-button:focus {
+    border: 1px solid rgba(33, 33, 33, 0.4); 
+    background: rgba(192,192,192,0.5);
+}
+
+.notification-icon-button:active {
+    background:  rgba(128,128,128,0.5);
+}
+
+.notification-icon-button > StIcon {
+    icon-size: 36px;
+}
+
+.chat-received {
+    background-color: rgba(74,144,217,0.6);
+    border-radius: 4px;
+    box-shadow: inset  0px 1px 2px rgba(0,0,0,0.5);
+    color: #000;
+    text-shadow: rgba(255,255,255,0.5) 0px 1px 1px;
+    padding-left: 4px;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    border-radius: 4px;
+}
+
+.chat-sent {
+    background-color: rgba(235,235,235,0.6);
+    border-radius: 4px;
+    box-shadow: inset  0px 1px 2px rgba(0,0,0,0.5);
+    color: #000;
+    text-shadow: rgba(255,255,255,0.5) 0px 1px 1px;
+    padding-left: 4px;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    border-radius: 4px;
+}
+
+.chat-meta-message {
+    padding-left: 4px;
+    border-radius: 4px;
+    font-size: 12px;
+    color: #666;
+}
+
+.subscription-message {
+    font-style: italic;
+}
+
+.notification StEntry {
+    padding: 4px;
+    border-radius: 4px;
+    color: rgb(44, 44, 44);
+    border: 2px solid rgba(255,255,255,0.5);
+    background-color: rgba(255,255,255,0.9);
+    caret-color: rgb(128, 128, 128);
+    caret-size: 1px;
+    width: 250px;
+    transition-duration: 300;
+    box-shadow: inset 0px 0px 2px 1px rgba(0,0,0,0.4);
+}
+
+.notification StEntry:focus {
+    border-radius: 4px;
+    color: rgb(44, 44, 44);
+    border: 2px solid rgba(255,255,255,0.5);
+    background-color: rgba(255,255,255,0.9);
+    caret-color: rgb(128, 128, 128);
+    caret-size: 1px;
+    width: 250px;
+    transition-duration: 300;
+    box-shadow: inset 0px 0px 2px 1px rgba(0,0,0,0.4);
+    caret-color: #545454;
+    
+}
+
+/* The spacing and padding on the summary is tricky; we want to keep
+ * the icons from touching each other or the edges of the screen, but
+ * we also want them to be "Fitts"-y with respect to the edges, so the
+ * summary area's bottom and right padding must actually be part of
+ * the icons. However, we can't put *all* of the padding into the
+ * icons, because then the summary would be 0x0 when there were no
+ * icons in it, and so you wouldn't be able to hover over it to
+ * activate it.
+ *
+ * Also, the spacing between a summary-source's icon and title is
+ * actually specified as padding-left in source-title, because we
+ * want the spacing to collapse along with the title.
+ */
+#summary-mode {
+    padding: 0px 6px 0px 6px; /* same as the values in .summary-source */
+    height: 60px;
+    spacing: 10px;
+}
+
+.summary-source-button {
+    border-radius: 5px 5px 5px 5px;
+    padding-left: 12px;
+    padding-right: 12px;
+    border: 1px solid rgba(66,66,66,0.0);
+}
+
+.summary-source-button:focus {
+    border: 1px solid rgba(66,66,66,0.2);
+}
+
+.summary-source-button:selected {
+    color: #444;
+    text-shadow: white 0px 1px 2px;
+    border: 1px solid rgba(66,66,66,0.2);
+    background-gradient-start: rgba(255,255,255,0.9);
+    background-gradient-end: rgba(214,214,214,0.7);
+/*    box-shadow: 0px 0px 3px 1px rgba(0,0,0,0.8);*/
+}
+
+.summary-source-button:expanded {
+}
+
+.summary-source-button:expanded:selected {
+}
+
+.summary-source-button:last-child {
+    text-shadow: white 0px 1px 2px;
+}
+
+.summary-source-counter {
+    color: white;
+    text-shadow: black 1px 1px 3;
+    font-size: 11pt;
+    min-height: 1em;
+    min-width: 1em;
+}
+
+.source-title {
+    font-size: 9.5pt;
+    font-weight: bold;
+    
+}
+
+.summary-boxpointer #summary-right-click-menu {
+    font-size: 10.5pt;
+    padding: 8px;
+}
+
+#summary-notification-stack-scrollview {
+    max-height: 18em;
+    padding-top: 6px;
+    padding-bottom: 6px;
+}
+
+/* App Switcher */
+#altTabPopup {
+    padding: 8px;
+    spacing: 16px;
+}
+
+.switcher-list {
+    border: 1px solid rgba(50,50,50,0.3);
+    background-gradient-direction: vertical; 
+    background-gradient-start: rgba(255,255,255,0.7);
+    background-gradient-end: rgba(214,214,214,0.5);
+    border-radius: 32px;
+    padding: 20px;
+    font-size: 9pt;
+    color: rgba(44,44,44,0.8);
+    box-shadow: 0px 0px 4px 4px rgba(0,0,0,0.0);
+}
+
+.switcher-list-item-container {
+    spacing: 8px;
+}
+
+.thumbnail-scroll-gradient-left {
+    background-gradient-direction: horizontal;
+    background-gradient-start: rgba(255, 255, 255, 0.9);
+    background-gradient-end: rgba(230, 230, 230, 0);
+    border-radius: 32px;
+    border-radius-topright: 0px;
+    border-radius-bottomright: 0px;
+    width: 60px;
+}
+
+.thumbnail-scroll-gradient-right {
+    background-gradient-direction: horizontal;
+    background-gradient-start: rgba(230, 230, 230, 0);
+    background-gradient-end: rgba(255, 255, 255, 0.9);
+    border-radius: 32px;
+    border-radius-topleft: 0px;
+    border-radius-bottomleft: 0px;
+    width: 60px;
+}
+
+.switcher-list .item-box {
+    padding: 8px;
+    border-radius: 8px;
+}
+
+.switcher-list .item-box:outlined {
+    background-gradient-direction: vertical;
+    background-gradient-start: #80BDEF;
+    background-gradient-end: #4A90D9;
+    border-radius: 8px 8px 8px 8px;
+    border: 0px solid rgba(255,255,255,1);
+    color: #fff;
+    text-shadow: black 0px 1px 2px;
+    box-shadow: inset 0px 1px 2px rgba(0,0,0,0.8);
+}
+
+.switcher-list .item-box:selected {
+    background-gradient-direction: vertical;
+    background-gradient-start: #80BDEF;
+    background-gradient-end: #4A90D9;
+    border-radius: 8px 8px 8px 8px;
+    border: 0px solid rgba(255,255,255,1);
+    color: #fff;
+    text-shadow: black 0px 1px 2px;
+    box-shadow: inset 0px 1px 2px rgba(0,0,0,0.8);
+}
+
+.switcher-list .thumbnail-box {
+    padding: 2px;
+    spacing: 4px;
+}
+
+.switcher-list .thumbnail {
+    width:  256px;
+}
+
+.switcher-list .separator {
+    width: 1px;
+    background: rgba(16,16,16,0.2);
+}
+
+.ripple-box {
+    width: 52px;
+    height: 52px;
+    background-image: url("corner-ripple.png");
+}
+
+.switcher-arrow {
+    border-color: rgba(0,0,0,0);
+    color: #808080;
+}
+
+.switcher-arrow:highlighted {
+    border-color: rgba(0,0,0,0);
+    color: black;
+}
+
+/* Workspace Switcher */
+.workspace-switcher-group {
+    padding: 12px;
+}
+
+.workspace-switcher-container {
+    border: 1px solid rgba(0,0,0,0.2);
+    background-gradient-direction: vertical;
+    background-gradient-start: rgba(255,255,255,0.7);
+    background-gradient-end: rgba(200,200,200,0.3);
+    border-radius: 4px;
+    box-shadow: 0px 0px 6px 3px rgba(33,33,33,0);
+    padding: 20px;
+}
+
+.workspace-switcher {
+    background: rgba(200,200,200,0);
+    border-radius: 4px;
+    padding: 4px;
+    spacing: 8px;
+    box-shadow: inset 0px 5px 10px rgba(33,33,33,0.1);
+}
+
+.ws-switcher-active-up {
+    height: 100px;
+    background-color: rgba(74,144,217,0.5);
+    border-radius: 4px 4px 4px 4px;
+    border: 1px solid rgba(0,0,0,0.2);
+    color: rgba(155,155,155,0.6);
+    box-shadow: 0px 0px 2px 4px rgba(33,33,33,0);
+    background-image: url("up.png");
+    border-radius: 4px;
+}
+
+.ws-switcher-active-down {
+    height: 100px;
+    background-color: rgba(74,144,217,0.5);
+    border-radius: 4px 4px 4px 4px;
+    border: 1px solid rgba(0,0,0,0.2);
+    color: rgba(155,155,155,0.6);
+    -st-shadow: 0px 0px 2px 4px rgba(33,33,33,0);
+    background-image: url("down.png");
+    border-radius: 4px;
+}
+
+.ws-switcher-box {
+    height: 96px;
+    background: transparent;
+    border-radius: 4px;
+}
+
+/* Modal Dialogs */
+/* Dialog Subject Text Style */
+.show-processes-dialog-subject,
+.mount-question-dialog-subject,
+.end-session-dialog-subject {
+    font-size: 14pt;
+    font-weight: bold;
+    color: #999999;
+}
+
+.modal-dialog {
+    font-size: 12pt;
+    border-radius: 24px;
+    background-gradient-direction: vertical; 
+    background-gradient-start: rgba(208,211,213,0.4);
+    background-gradient-end: rgba(255,255,255,0.6);
+    border: 1px solid rgba(33,33,33,0.5);
+    color: rgba(30,30,30,0.6);
+    text-shadow: 0px 0px 4px white;
+
+    padding-right: 42px;
+    padding-left: 42px;
+    padding-bottom: 30px;
+    padding-top: 30px;
+}
+
+.modal-dialog-button-box {
+}
+
+
+.modal-dialog-button {
+    border: 1px solid #8b8b8b;
+    border-radius: 18px;
+    font-size: 10.5pt;
+
+    margin-left: 10px;
+    margin-right: 10px;
+
+    padding-left: 32px;
+    padding-right: 32px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+
+    background-gradient-direction: vertical; 
+    background-gradient-start: rgba(255,255,255,0.8);
+    background-gradient-end: rgba(208,211,213,0.6);
+}
+
+.modal-dialog-button:active,
+.modal-dialog-button:pressed {
+    border-color: #a5a5a5;
+    background-gradient-start: rgba(255,255,255,1);
+    background-gradient-end: rgba(250,250,250,0.7);
+}
+
+.modal-dialog-button:focus {
+    border: 2px solid #a5a5a5;
+
+    padding-left: 31px;
+    padding-right: 31px;
+    padding-top: 7px;
+    padding-bottom: 7px;
+}
+
+/* Run Dialog */
+
+.run-dialog-error-box {
+    padding-top: 15px;
+    spacing: 5px;
+}
+
+.run-dialog-entry {
+    font-size: 10.5pt;
+    width: 320px;
+    color: #000;
+    background: rgba(255,255,255,1.0);
+    border: 1px solid rgba(0,0,0,0.3);
+    border-radius: 4px;
+    padding: 2px;
+}
+
+.run-dialog {
+    padding: 8px;
+    border-radius: 4px;
+    background-gradient-direction: vertical;
+    background-gradient-start: rgba(251,251,251,0.8);
+    background-gradient-end: rgba(194,194,194,0.4);
+    border: 1px solid rgba(0,0,0,0.2);
+    box-shadow: 0px 0px 6px 4px rgba(0,0,0,0.6);
+}
+
+.lightbox {
+    background-color: rgba(255, 255, 255, 0.3);
+}
+
+
+.flashspot {
+    background-color: yellow;
+}
+
+
+/* End Session Dialog */
+/*.end-session-dialog-subject {*/
+/*    font-size: 12pt;*/
+/*    font-weight: bold;*/
+/*    color: #666666;*/
+/*    padding-top: 10px;*/
+/*    padding-left: 17px;*/
+/*    padding-bottom: 30px;*/
+/*}*/
+
+/*.end-session-dialog-description {*/
+/*    font-size: 10pt;*/
+/*    color: white;*/
+/*    padding-left: 17px;*/
+/*    padding-right: 40px;*/
+/*    width: 16em;*/
+/*}*/
+
+.end-session-dialog-logout-icon {
+    width: 64px;
+    height: 64px;
+}
+
+.end-session-dialog-shutdown-icon {
+    width: 64px;
+    height: 64px;
+}
+
+
+/*.end-session-dialog-app-list {*/
+/*    font-size: 10pt;*/
+/*    max-height: 200px;*/
+/*    padding-top: 42px;*/
+/*    padding-bottom: 42px;*/
+/*    padding-left: 17px;*/
+/*    padding-right: 32px;*/
+/*}*/
+
+/*.end-session-dialog-app-list-item {*/
+/*    padding-right: 1em;*/
+/*}*/
+
+/*.end-session-dialog-app-list-item-icon {*/
+/*    padding-right: 17px;*/
+/*}*/
+
+/*.end-session-dialog-app-list-item-name {*/
+/*    font-size: 10pt;*/
+/*}*/
+
+/*.end-session-dialog-app-list-item-description {*/
+/*    font-size: 8pt;*/
+/*    color: #444444;*/
+/*}*/
+
+/* ShellMountOperation Dialogs */
+.shell-mount-operation-icon {
+    icon-size: 48px;
+}
+
+.mount-password-reask {
+    color: red;
+}
+
+.show-processes-dialog,
+.mount-question-dialog {
+    spacing: 24px;
+}
+
+.show-processes-dialog-subject,
+.mount-question-dialog-subject {
+    padding-top: 10px;
+    padding-left: 17px;
+    padding-bottom: 6px;
+}
+
+.mount-question-dialog-subject {
+    max-width: 500px;
+}
+
+.show-processes-dialog-subject:rtl,
+.mount-question-dialog-subject:rtl {
+    padding-left: 0px;
+    padding-right: 17px;
+}
+
+.show-processes-dialog-description,
+.mount-question-dialog-description {
+    padding-left: 17px;
+    width: 28em;
+}
+
+.show-processes-dialog-description:rtl,
+.mount-question-dialog-description:rtl {
+    padding-right: 17px;
+}
+
+.show-processes-dialog-app-list {
+    font-size: 10pt;
+    max-height: 200px;
+    padding-top: 24px;
+    padding-left: 49px;
+    padding-right: 32px;
+}
+
+.show-processes-dialog-app-list:rtl {
+    padding-right: 49px;
+    padding-left: 32px;
+}
+
+.show-processes-dialog-app-list-item {
+    color: #ccc;
+}
+
+.show-processes-dialog-app-list-item:hover {
+    color: white;
+}
+
+.show-processes-dialog-app-list-item:ltr {
+    padding-right: 1em;
+}
+
+.show-processes-dialog-app-list-item:rtl {
+    padding-left: 1em;
+}
+
+.show-processes-dialog-app-list-item-icon:ltr {
+    padding-right: 17px;
+}
+
+.show-processes-dialog-app-list-item-icon:rtl {
+    padding-left: 17px;
+}
+
+.show-processes-dialog-app-list-item-name {
+    font-size: 10pt;
+}
+
+/* Password or Authentication Dialog */
+.prompt-dialog {
+    /* this is the width of the entire modal popup */
+    width: 500px;
+}
+
+.prompt-dialog-main-layout {
+    spacing: 24px;
+    padding: 10px;
+}
+
+.prompt-dialog-message-layout {
+    spacing: 16px;
+}
+
+.prompt-dialog-headline {
+    font-size: 12pt;
+    font-weight: bold;
+    color: #666666;
+}
+
+.prompt-dialog-password-label:ltr {
+    padding-right: 0.5em;
+}
+
+.prompt-dialog-password-label:rtl {
+    padding-left: 0.5em;
+}
+
+.prompt-dialog-password-entry {
+    background-gradient-start: rgb(236,236,236);
+    background-gradient-end: white;
+    background-gradient-direction: vertical;
+    color: black;
+    selected-color: white;
+    border-radius: 5px;
+    border: 2px solid #555753;
+}
+
+.prompt-dialog-password-entry:focus {
+    border: 2px solid #3465a4;
+}
+
+.prompt-dialog-password-entry .capslock-warning {
+    icon-size: 16px;
+    warning-color: #999;
+    padding: 0 4px;
+}
+
+.prompt-dialog-error-label {
+    font-size: 10pt;
+    color: #ffff00;
+    padding-bottom: 8px;
+}
+
+.prompt-dialog-info-label {
+    font-size: 10pt;
+    padding-bottom: 8px;
+}
+
+/* intentionally left transparent to avoid dialog changing size */
+.prompt-dialog-null-label {
+    font-size: 10pt;
+    color: rgba(0,0,0,0);
+    padding-bottom: 8px;
+}
+
+/* PolicyKit Authentication Dialog */
+.polkit-dialog {
+    /* this is the width of the entire modal popup */
+    width: 500px;
+}
+
+.polkit-dialog-main-layout {
+    spacing: 24px;
+    padding: 10px;
+}
+
+.polkit-dialog-message-layout {
+    spacing: 16px;
+}
+
+.polkit-dialog-headline {
+    font-size: 12pt;
+    font-weight: bold;
+}
+
+.polkit-dialog-description {
+    font-size: 10pt;
+}
+
+.polkit-dialog-user-layout {
+    padding-left: 10px;
+    spacing: 10px;
+}
+
+.polkit-dialog-user-layout:rtl {
+    padding-left: 0px;
+    padding-right: 10px;
+}
+
+.polkit-dialog-user-root-label {
+    color: #ff0000;
+}
+
+.polkit-dialog-password-label:ltr {
+    padding-right: 0.5em;
+}
+
+.polkit-dialog-password-label:rtl {
+    padding-left: 0.5em;
+}
+
+.polkit-dialog-password-entry {
+    background-color: white;
+    color: black;
+    border-radius: 5px;
+}
+
+.polkit-dialog-error-label {
+    font-size: 10pt;
+    color: #ffff00;
+    padding-bottom: 8px;
+}
+
+.polkit-dialog-info-label {
+    font-size: 10pt;
+    padding-bottom: 8px;
+}
+
+/* intentionally left transparent to avoid dialog changing size */
+.polkit-dialog-null-label {
+    font-size: 10pt;
+    color: rgba(0,0,0,0);
+    padding-bottom: 8px;
+}
+
+/* Magnifier */
+
+.magnifier-zoom-region {
+    border: 2px solid rgba(128, 0, 0, 255);
+}
+
+.magnifier-zoom-region.full-screen {
+    border-width: 0px;
+}
+
+
+
+
+/* On-screen Keyboard */
+
+#keyboard {
+/*    background-gradient-start: rgba(208,211,213,0.2);*/
+/*    background-gradient-end: rgba(251,251,251,0.4);*/
+
+    background-gradient-direction: vertical;
+    background-gradient-start: rgba(251,251,251,0.4);
+    background-gradient-end: rgba(194,194,194,0.8);
+}
+
+.keyboard-layout {
+    spacing: 10px;
+    padding: 10px;
+}
+
+.keyboard-row {
+    spacing: 15px;
+}
+
+.keyboard-key {
+    min-height: 30px;
+    min-width: 30px;
+    background-gradient-start: rgba(255,245,245,0.4);
+    background-gradient-end: rgba(105,105,105,0.1);
+    background-gradient-direction: vertical;
+    font-size: 14pt;
+    font-weight: bold;
+    border-radius: 10px;
+    border: 2px solid rgba(33,33,33,0.3);
+    color: grey;
+}
+
+.keyboard-key:grayed {
+   color: #808080;
+   border-color: #808080;
+}
+
+.keyboard-key:checked,
+.keyboard-key:hover {
+    border: 3px solid rgba(33,33,33,0.3);
+}
+
+.keyboard-key:active {
+    border: 2px solid rgba(33,33,33,0.5);
+}
+
+.keyboard-subkeys {
+    color: grey;
+    padding: 5px;
+    -arrow-border-radius: 10px;
+    -arrow-background-color: rgba(251,251,251,0.4);
+    -arrow-border-width: 2px;
+    -arrow-border-color: rgba(33,33,33,0.3);
+    -arrow-base: 20px;
+    -arrow-rise: 10px;
+    -boxpointer-gap: 5px;
+}

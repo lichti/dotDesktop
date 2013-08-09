@@ -1,39 +1,64 @@
 #!/bin/bash
+SRC_PATH=$(dirname $0)
+SRC_APP=$SRC_PATH/applications
+SRC_ICONS=$SRC_PATH/icons
+SRC_THEMES=$SRC_PATH/themes
+SRC_EXTESIONS=$SRC_PATH/extensions
+DST_APP=~/.local/share/applications
+DST_ICONS=~/.local/share/icons
+DST_THEMES=~/.themes
+DST_EXTENSIONS=~/.local/share/gnome-shell/extensions
+
 function install(){
 	echo "Installing..."
+	make_dir $DST_APP
+	copy_dir $SRC_APP $DST_APP "applications"
 
-	if [ -d ./applications ];then
-		if [ -d ./icons ];then
-			chk_dest
-			echo "...Copying new apps"
-			cp -vr ./applications ~/.local/share/
-			echo "...Copying new icons"
-			cp -vr ./icons ~/.local/share/
-		else
-			echo "..Icons not found"
-			echo "Install failled."
-			echo; echo
-		fi
-	else
-		echo "..Applications not found"
-		echo "Install failled."
-		echo; echo
-	fi
+        make_dir $DST_ICONS
+	copy_dir $SRC_ICONS $DST_ICONS "icons"  
+
+        make_dir $DST_THEMES
+	copy_files $SRC_THEMES $DST_THEMES "themes"
+
+        make_dir $DST_EXTENSIONS
+	copy_dir $SRC_EXTENSIONS $DST_EXTENSIONS "extensions"
 }
- 
-function chk_dest() {
-	if [ -d ~/.local/share/applications ];then
-		echo "...Exists ~/.local/share/applications"
-	else
-		echo "...Creating ~/.local/share/applications"
-		mkdir -p ~/.local/share/applications
-	fi
 
-        if [ -d ~/.local/share/icons ];then
-                echo "...Exists ~/.local/share/iconss"
+function copy_dir(){
+SRC=$1
+DST=$2
+TXT=$3
+	if [ -d $SRC ];then
+                echo "...Copying new $TXT"
+                cp -r $SRC $DST
 	else
-		echo "...Creating ~/.local/share/iconss"
-                mkdir -p ~/.local/share/icons
+                echo "...$TXT not found"
+                echo; echo
+        fi
+
+}
+
+function copy_files(){
+SRC=$1
+DST=$2
+TXT=$3
+	if [ -d $SRC ];then
+                echo "...Copying new $TXT"
+                cp -r $SRC/* $DST
+	else
+                echo "...$TXT not found"
+                echo; echo
+        fi
+
+}
+
+function make_dir(){
+	DIR=$1
+        if [ -d $DIR ];then
+                echo "...Exists $DIR"
+        else
+                echo "...Creating $DIR"
+                mkdir -p $DIR
         fi
 }
 

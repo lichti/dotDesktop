@@ -1,0 +1,10 @@
+{ 
+   "shell-theme": {
+   "name": "Air", 
+   "author": "OxayotlTheGreat", 
+   "version": "2.1",
+   "type":   "custom",
+   "thumbnail": "preview.png", 
+   "url": "http://gnome-look.org/usermanager/search.php?username=OxayotlTheGreat"
+    }
+}
