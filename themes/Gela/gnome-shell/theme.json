@@ -1,0 +1,10 @@
+﻿{ 
+   "shell-theme": {
+   "name": "Gela", 
+   "author": "Golan", 
+   "version": "2.0",
+   "type":   "custom",
+   "thumbnail": "gela-preview.jpg", 
+   "url": "http://golan77.deviantart.com/" 
+    }
+}

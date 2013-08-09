@@ -1,0 +1,9 @@
+#!/usr/bin/env xdg-open
+[Desktop Entry]
+Version=1.0
+Terminal=false
+Type=Application
+Name=LinkedIn
+Exec=/opt/google/chrome/google-chrome --app=http://www.linkedin.com/
+Icon=linkedin
+StartupWMClass=www.linkedin.com
