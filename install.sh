@@ -12,30 +12,16 @@ DST_EXTENSIONS=~/.local/share/gnome-shell/extensions
 function install(){
 	echo "Installing..."
 	make_dir $DST_APP
-	copy_dir $SRC_APP $DST_APP "applications"
+	copy_files $SRC_APP $DST_APP "applications"
 
         make_dir $DST_ICONS
-	copy_dir $SRC_ICONS $DST_ICONS "icons"  
+	copy_files $SRC_ICONS $DST_ICONS "icons"  
 
         make_dir $DST_THEMES
 	copy_files $SRC_THEMES $DST_THEMES "themes"
 
         make_dir $DST_EXTENSIONS
-	copy_dir $SRC_EXTENSIONS $DST_EXTENSIONS "extensions"
-}
-
-function copy_dir(){
-SRC=$1
-DST=$2
-TXT=$3
-	if [ -d $SRC ];then
-                echo "...Copying new $TXT"
-                cp -r $SRC $DST
-	else
-                echo "...$TXT not found"
-                echo; echo
-        fi
-
+	copy_files $SRC_EXTENSIONS $DST_EXTENSIONS "extensions"
 }
 
 function copy_files(){
