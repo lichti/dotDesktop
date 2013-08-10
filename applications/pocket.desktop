@@ -1,0 +1,10 @@
+#!/usr/bin/env xdg-open
+[Desktop Entry]
+Version=1.0
+Terminal=false
+Type=Application
+Name=Pocket
+Exec=java -jar /home/gustavo/bin/pocket_1.5.jar
+Icon=pocket
+StartupWMClass=pocket_1.5
+Categories=Network;WebBrowser;
