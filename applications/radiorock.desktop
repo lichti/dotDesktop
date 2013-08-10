@@ -6,10 +6,10 @@ GenericName[pt]=Navegador Web
 GenericName[pt_BR]=Navegador da Internet
 Comment[pt]=Aceder à Internet
 Comment[pt_BR]=Acessar a internet
-Exec=/opt/google/chrome/google-chrome --app=http://www.radiorock.com.br/aacplayer.swf
+Exec=/opt/google/chrome/google-chrome --app=http://topframe.radiorock.com.br/site/aovivo/fordrocks.swf
 Terminal=false
 Icon=radiorock
 Type=Application
 Categories=Network;WebBrowser;
-StartupWMClass=www.radiorock.com.br__aacplayer.swf
+StartupWMClass=www.radiorock.com.br
 Categories=Network;WebBrowser;
