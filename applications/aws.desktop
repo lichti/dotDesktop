@@ -7,3 +7,4 @@ Name=AWS
 Exec=/opt/google/chrome/google-chrome --app=https://console.aws.amazon.com/console/home
 Icon=aws
 StartupWMClass=console.aws.amazon.com__console_home
+Categories=Network;WebBrowser;

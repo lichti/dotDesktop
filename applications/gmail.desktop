@@ -11,4 +11,4 @@ Terminal=false
 Icon=gmail
 Type=Application
 Categories=Network;WebBrowser;
-StartupWMClass=mail.google.com_gustavo.lichti@gmail.com
+StartupWMClass=mail.google.com

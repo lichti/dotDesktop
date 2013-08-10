@@ -8,3 +8,4 @@ Name=Twitter
 Exec=/opt/google/chrome/google-chrome --app=https://twitter.com/
 Icon=twitter
 StartupWMClass=twitter.com
+Categories=Network;WebBrowser;

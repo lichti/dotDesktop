@@ -12,3 +12,4 @@ Icon=radiorock
 Type=Application
 Categories=Network;WebBrowser;
 StartupWMClass=www.radiorock.com.br__aacplayer.swf
+Categories=Network;WebBrowser;

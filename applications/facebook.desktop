@@ -7,3 +7,4 @@ Name=Facebook
 Exec=/opt/google/chrome/google-chrome "--app=https://www.facebook.com/"
 Icon=facebook
 StartupWMClass=www.facebook.com
+Categories=Network;WebBrowser;

@@ -7,3 +7,4 @@ Name=LinkedIn
 Exec=/opt/google/chrome/google-chrome --app=http://www.linkedin.com/
 Icon=linkedin
 StartupWMClass=www.linkedin.com
+Categories=Network;WebBrowser;

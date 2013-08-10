@@ -7,3 +7,4 @@ Name=Feedly
 Exec=/opt/google/chrome/google-chrome "--app=http://cloud.feedly.com/#latest"
 Icon=feedly
 StartupWMClass=cloud.feedly.com
+Categories=Network;WebBrowser;

@@ -6,4 +6,5 @@ Type=Application
 Name=DigitalOcean
 Exec=/opt/google/chrome/google-chrome --app=https://www.digitalocean.com/droplets/352363
 Icon=digitalocean
-StartupWMClass=www.digitalocean.com__droplets_352363
+StartupWMClass=www.digitalocean.com
+Categories=Network;WebBrowser;

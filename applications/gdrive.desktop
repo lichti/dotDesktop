@@ -7,3 +7,4 @@ Name=Google Drive
 Exec=/opt/google/chrome/google-chrome "--app=https://drive.google.com/#my-drive"
 Icon=gdrive
 StartupWMClass=drive.google.com
+Categories=Network;WebBrowser;
