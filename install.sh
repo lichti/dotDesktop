@@ -1,5 +1,10 @@
 #!/bin/bash
 SRC_PATH=$(dirname $0)
+
+for FILE in $SRC_PATH/helpers/*; do
+	source $FILE
+done
+
 SRC_APP=$SRC_PATH/applications
 SRC_ICONS=$SRC_PATH/icons
 SRC_THEMES=$SRC_PATH/themes
@@ -27,30 +32,6 @@ function install(){
 
         make_dir $DST_BIN
 	copy_files $SRC_BIN $DST_BIN "bin"
-}
-
-function copy_files(){
-SRC=$1
-DST=$2
-TXT=$3
-	if [ -d $SRC ];then
-                echo "...Copying new $TXT"
-                cp -r $SRC/* $DST
-	else
-                echo "...$TXT not found"
-                echo; echo
-        fi
-
-}
-
-function make_dir(){
-	DIR=$1
-        if [ -d $DIR ];then
-                echo "...Exists $DIR"
-        else
-                echo "...Creating $DIR"
-                mkdir -p $DIR
-        fi
 }
 
 install
