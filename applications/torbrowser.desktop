@@ -1,0 +1,10 @@
+#!/usr/bin/env xdg-open
+[Desktop Entry]
+Version=1.0
+Name=Tor Browser
+Exec=/home/gustavo/bin/tor-browser_en-US/start-tor-browser
+Terminal=false
+Icon=tor
+Type=Application
+Categories=Network;WebBrowser;
+StartupWMClass=tor_browser
